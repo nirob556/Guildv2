@@ -49,6 +49,10 @@ _ICONS = {
     "star_fill": '<svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>',
     "bolt_fill": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>',
     "crown_fill": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 18h20l-1.5-9-4 3-4.5-7-4.5 7-4-3z"></path></svg>',
+    "ban": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line></svg>',
+    "fire": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg>',
+    "history": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"></path><path d="M3 3v5h5"></path><path d="M12 7v5l3 2"></path></svg>',
+    "download": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>',
 }
 
 
@@ -90,12 +94,10 @@ body::before{content:'';position:fixed;inset:0;background:
   mask-image:radial-gradient(ellipse at 50% 40%,#000 20%,transparent 75%);
   -webkit-mask-image:radial-gradient(ellipse at 50% 40%,#000 20%,transparent 75%)}
 
-/* Announcement */
 .ann{position:relative;z-index:5;background:#fff;color:#000;padding:9px 40px 9px 14px;text-align:center;font-size:12px;font-weight:600;font-family:'Inter',sans-serif}
 .ann a{color:#000;text-decoration:underline;font-weight:800}
 .ann .cls{position:absolute;right:12px;top:50%;transform:translateY(-50%);background:transparent;border:none;cursor:pointer;color:#000;font-size:16px;line-height:1;padding:4px}
 
-/* Header */
 .hdr{position:relative;z-index:5;display:flex;align-items:center;justify-content:space-between;padding:14px 18px;border-bottom:1px solid #151515}
 .hlogo{display:flex;align-items:center;gap:10px}
 .hshield{width:34px;height:34px;display:inline-flex;align-items:center;justify-content:center}
@@ -104,14 +106,12 @@ body::before{content:'';position:fixed;inset:0;background:
 .hbell{background:transparent;border:none;cursor:pointer;padding:6px;color:#fff}
 .hbell svg{width:20px;height:20px;stroke:#fff;fill:none;stroke-width:1.8}
 
-/* Status pill */
 .status{position:relative;z-index:5;display:flex;justify-content:center;padding:16px 18px 0}
 .spill{display:inline-flex;align-items:center;gap:8px;background:#0d0d0d;border:1px solid #1c1c1c;border-radius:24px;padding:7px 14px 7px 11px;font-family:'Inter',sans-serif;font-size:11px;font-weight:600;color:#b8b8b8}
 .spill .dot{width:7px;height:7px;border-radius:50%;background:#22c55e;box-shadow:0 0 8px #22c55e;animation:pl 1.4s infinite}
 .spill .mut{color:#5a5a5a;font-weight:400;margin-left:2px}
 @keyframes pl{0%,100%{opacity:1}50%{opacity:0.4}}
 
-/* Hero */
 .hero{position:relative;z-index:5;padding:50px 22px 20px;max-width:640px;margin:0 auto;text-align:center}
 .hero h1{font-family:'Inter',sans-serif;font-size:26px;font-weight:800;letter-spacing:1.5px;margin-bottom:36px;
   background:linear-gradient(90deg,#22d3ee,#a78bfa,#22d3ee);
@@ -120,7 +120,6 @@ body::before{content:'';position:fixed;inset:0;background:
 .hero p{font-family:'Inter',sans-serif;font-size:17px;font-weight:500;line-height:1.65;color:#b8b8b8;letter-spacing:0.2px}
 .hero p + p{margin-top:14px}
 
-/* CTA buttons */
 .ctas{position:relative;z-index:5;display:flex;gap:12px;justify-content:center;padding:24px 18px 50px;flex-wrap:wrap;max-width:440px;margin:0 auto}
 .cbtn{flex:1;min-width:140px;padding:14px 20px;border-radius:10px;font-family:'Inter',sans-serif;font-size:14px;font-weight:800;letter-spacing:0.5px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1px solid transparent;transition:all 0.2s}
 .cb-white{background:#fff;color:#000}
@@ -129,7 +128,6 @@ body::before{content:'';position:fixed;inset:0;background:
 .cb-out:hover{border-color:#555;background:#0d0d0d}
 .cbtn svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2.2}
 
-/* Pricing section */
 .psec{position:relative;z-index:5;max-width:1200px;margin:0 auto;padding:0 18px 80px;scroll-margin-top:20px}
 .ptitle{text-align:center;font-family:'Inter',sans-serif;font-size:24px;font-weight:800;letter-spacing:1px;color:#fff;margin-bottom:8px}
 .psub{text-align:center;font-size:11px;color:#7a7a7a;letter-spacing:3px;text-transform:uppercase;margin-bottom:14px;font-weight:600}
@@ -166,7 +164,6 @@ body::before{content:'';position:fixed;inset:0;background:
 .pc.gold .bb{background:linear-gradient(135deg,#f59e0b,#d97706);box-shadow:0 6px 24px rgba(245,158,11,0.3);color:#000}
 .an{text-align:center;font-size:10px;color:#4a4a4a;margin-top:10px;letter-spacing:0.5px;font-weight:500}
 
-/* Telegram float */
 .tg{position:fixed;right:18px;bottom:18px;width:52px;height:52px;border-radius:50%;background:#22a7e8;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 28px rgba(34,167,232,0.5);cursor:pointer;z-index:20;border:none;text-decoration:none}
 .tg svg{width:26px;height:26px;fill:#fff}
 
@@ -202,7 +199,6 @@ IND server is disabled &mdash; please wait patiently! <a href="#pricing">Learn M
 <a href="#pricing" class="cbtn cb-out">Pricing <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></a>
 </div>
 
-<!-- Pricing -->
 <div class="psec" id="pricing">
 <div class="ptitle">Choose Your Plan</div>
 <div class="psub">Works On All Servers</div>
@@ -269,7 +265,6 @@ window.open('https://t.me/'+TG+'?text='+encodeURIComponent(m),'_blank');
 }
 render();
 
-/* Smooth scroll for #pricing */
 document.querySelectorAll('a[href^="#"]').forEach(a=>{
   a.addEventListener('click',e=>{
     const id=a.getAttribute('href');
@@ -312,10 +307,7 @@ body::before{content:'';position:absolute;inset:0;background:
 
 .wrap{width:100%;max-width:440px;position:relative;z-index:1}
 .brand{display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:60px}
-.shield{
-  width:36px;height:36px;
-  display:inline-flex;align-items:center;justify-content:center;
-}
+.shield{width:36px;height:36px;display:inline-flex;align-items:center;justify-content:center;}
 .shield svg{width:36px;height:36px;stroke:#fff;fill:none;stroke-width:1.8}
 .brand-txt{font-family:'Inter',sans-serif;font-size:18px;font-weight:800;letter-spacing:3px;color:#fff}
 .brand-txt .dot{color:#555;font-weight:700}
@@ -333,43 +325,17 @@ body::before{content:'';position:absolute;inset:0;background:
 .iw svg.lft{position:absolute;left:16px;top:50%;transform:translateY(-50%);width:18px;height:18px;stroke:#6a6a6a;fill:none;stroke-width:1.8;pointer-events:none}
 .iw svg.rgt{position:absolute;right:16px;top:50%;transform:translateY(-50%);width:18px;height:18px;stroke:#6a6a6a;fill:none;stroke-width:1.8;cursor:pointer;transition:stroke 0.2s}
 .iw svg.rgt:hover{stroke:#fff}
-.f input{
-  width:100%;background:transparent;
-  border:1px solid #2a2a2a;border-radius:10px;
-  padding:15px 46px;
-  color:#fff;font-size:14px;
-  font-family:'Inter',sans-serif;font-weight:500;
-  outline:none;transition:all 0.2s;
-}
+.f input{width:100%;background:transparent;border:1px solid #2a2a2a;border-radius:10px;padding:15px 46px;color:#fff;font-size:14px;font-family:'Inter',sans-serif;font-weight:500;outline:none;transition:all 0.2s;}
 .f input::placeholder{color:#4a4a4a;font-weight:400}
 .f input:focus{border-color:#555;background:rgba(255,255,255,0.02)}
 
 .remember{display:flex;align-items:center;justify-content:center;gap:10px;margin:24px 0 22px}
-.remember input[type=checkbox]{
-  appearance:none;-webkit-appearance:none;
-  width:20px;height:20px;border-radius:5px;
-  border:1.5px solid #444;background:transparent;
-  cursor:pointer;position:relative;transition:all 0.2s;flex-shrink:0;
-}
+.remember input[type=checkbox]{appearance:none;-webkit-appearance:none;width:20px;height:20px;border-radius:5px;border:1.5px solid #444;background:transparent;cursor:pointer;position:relative;transition:all 0.2s;flex-shrink:0;}
 .remember input[type=checkbox]:checked{background:#fff;border-color:#fff}
-.remember input[type=checkbox]:checked::after{
-  content:'';position:absolute;left:6px;top:2px;
-  width:6px;height:11px;
-  border:solid #000;border-width:0 2px 2px 0;
-  transform:rotate(45deg);
-}
+.remember input[type=checkbox]:checked::after{content:'';position:absolute;left:6px;top:2px;width:6px;height:11px;border:solid #000;border-width:0 2px 2px 0;transform:rotate(45deg);}
 .remember label{font-size:14px;color:#b8b8b8;cursor:pointer;font-weight:500}
 
-.btn{
-  width:100%;padding:17px;border-radius:10px;
-  background:#8a8a8a;color:#0a0a0a;
-  border:none;cursor:pointer;
-  font-family:'Inter',sans-serif;
-  font-size:15px;font-weight:700;
-  letter-spacing:0.3px;
-  display:flex;align-items:center;justify-content:center;gap:10px;
-  transition:all 0.2s;
-}
+.btn{width:100%;padding:17px;border-radius:10px;background:#8a8a8a;color:#0a0a0a;border:none;cursor:pointer;font-family:'Inter',sans-serif;font-size:15px;font-weight:700;letter-spacing:0.3px;display:flex;align-items:center;justify-content:center;gap:10px;transition:all 0.2s;}
 .btn:hover{background:#a0a0a0}
 .btn svg{width:18px;height:18px;stroke:#0a0a0a;fill:none;stroke-width:2}
 .btn:disabled{opacity:0.6;cursor:not-allowed}
@@ -386,7 +352,7 @@ body::before{content:'';position:absolute;inset:0;background:
 <span class="shield">
 <svg viewBox="0 0 24 24"><path d="M12 2L4 5v6c0 5 3.5 9.5 8 11 4.5-1.5 8-6 8-11V5l-8-3z"/><path d="M9 12l2 2 4-4"/></svg>
 </span>
-<span class="brand-txt">GHOST X<span class="space"> </span>LVL</span>
+<span class="brand-txt">NIROB X<span class="space"> </span>LVL</span>
 </div>
 
 <div class="welcome">
@@ -630,7 +596,46 @@ p{font-size:14px;color:var(--mut);line-height:1.7;margin-bottom:30px}
 """
 
 
-# ==================== DASHBOARD ====================
+# ==================== BANNED ====================
+BANNED_HTML = """<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Account Banned - NIROB X LEVEL</title>
+""" + _FONTS + """
+<style>
+""" + _CSS + """
+body{display:flex;align-items:center;justify-content:center;padding:24px;background:radial-gradient(ellipse at top,#200a0a 0%,#000 60%)}
+.wrap{width:100%;max-width:460px;text-align:center}
+.ic{width:84px;height:84px;border-radius:50%;background:rgba(239,68,68,0.08);border:1.5px solid var(--red);display:inline-flex;align-items:center;justify-content:center;margin-bottom:24px;color:var(--red)}
+h1{font-family:'Orbitron',sans-serif;font-size:26px;font-weight:800;letter-spacing:2px;text-transform:uppercase;margin-bottom:14px;color:var(--red)}
+p{font-size:14px;color:var(--mut);line-height:1.7;margin-bottom:14px}
+.reason{background:rgba(239,68,68,0.06);border:1px solid rgba(239,68,68,0.3);border-radius:10px;padding:14px;margin-bottom:24px;font-size:13px;color:#fff}
+.br{display:flex;flex-direction:column;gap:10px;max-width:300px;margin:0 auto}
+.b{display:block;padding:14px;border-radius:10px;font-family:'Orbitron',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;text-decoration:none;text-align:center;transition:all 0.2s;border:none;cursor:pointer}
+.b1{background:linear-gradient(135deg,#ef4444,#dc2626);color:#fff}
+.b1:hover{box-shadow:0 8px 28px rgba(239,68,68,0.5)}
+.b2{background:transparent;border:1px solid var(--line2);color:var(--mut)}
+.b2:hover{border-color:var(--red);color:var(--red)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="ic">""" + _icon("ban", "currentColor", 40) + """</div>
+<h1>Account Banned</h1>
+<p>Your account has been suspended from using this service.</p>
+<div class="reason">Reason: <b>__BAN_REASON__</b></div>
+<div class="br">
+<a class="b b1" href="https://t.me/NIROB_BBZ" target="_blank">Contact Support</a>
+<a class="b b2" href="/logout">Logout</a>
+</div>
+</div>
+</body>
+</html>
+"""
+
+
 # ==================== DASHBOARD ====================
 DASHBOARD_HTML = """<!DOCTYPE html>
 <html lang="en">
@@ -644,7 +649,7 @@ DASHBOARD_HTML = """<!DOCTYPE html>
 body{background:radial-gradient(ellipse at top,#0a1020 0%,#000 55%);padding-bottom:80px;overflow-x:hidden}
 *{-webkit-tap-highlight-color:transparent}
 
-/* ===== TOP BAR ===== */
+/* TOP BAR */
 .top{position:sticky;top:0;z-index:50;background:rgba(0,0,0,0.9);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
 .top-in{max-width:1200px;margin:0 auto;padding:12px 16px;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
 .logo{display:flex;align-items:center;gap:8px;font-family:'Orbitron',sans-serif;font-size:11px;font-weight:700;letter-spacing:1.5px}
@@ -653,8 +658,9 @@ body{background:radial-gradient(ellipse at top,#0a1020 0%,#000 55%);padding-bott
 .mi{display:flex;flex-direction:column;gap:1px;padding:3px 9px;border-left:2px solid #3b82f6}
 .mi .l{font-size:8px;color:var(--mut);letter-spacing:1.2px;text-transform:uppercase;font-weight:800;font-family:'Orbitron',sans-serif}
 .mi .v{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;white-space:nowrap}
-.act{display:flex;gap:5px}
+.act{display:flex;gap:5px;flex-wrap:wrap}
 .bs{padding:8px 12px;font-family:'Orbitron',sans-serif;font-size:9px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;border-radius:8px;cursor:pointer;text-decoration:none;border:1px solid transparent;display:inline-flex;align-items:center;justify-content:center;gap:4px;transition:all 0.2s;white-space:nowrap}
+.bs svg{width:12px;height:12px}
 .bw{background:#fff;color:#000}
 .bw:hover{opacity:0.88}
 .bg{background:transparent;border-color:var(--line2);color:var(--mut)}
@@ -665,52 +671,44 @@ body{background:radial-gradient(ellipse at top,#0a1020 0%,#000 55%);padding-bott
 @keyframes sp{to{transform:rotate(360deg)}}
 @keyframes pl{0%,100%{opacity:1}50%{opacity:0.4}}
 
-/* ===== MAIN ===== */
 .main{max-width:1200px;margin:0 auto;padding:18px 14px 80px}
 .grid{display:grid;grid-template-columns:1fr;gap:14px}
 
-/* ===== CARD ===== */
-.cc{
-  position:relative;
-  background:linear-gradient(145deg,#0b1220 0%,#080c14 100%);
-  border:1px solid #1a2740;
-  border-radius:16px;
-  overflow:hidden;
-  transition:border-color 0.25s, box-shadow 0.25s;
-}
-.cc:hover{border-color:#1e3a5f;box-shadow:0 0 0 1px rgba(59,130,246,0.08), 0 8px 32px rgba(0,0,0,0.5)}
+/* GLORY BANNER */
+.glory-banner{background:linear-gradient(135deg,rgba(245,158,11,0.08),rgba(239,68,68,0.05));border:1px solid rgba(245,158,11,0.35);border-radius:16px;padding:18px 20px;margin-bottom:16px;position:relative;overflow:hidden}
+.glory-banner::before{content:'';position:absolute;top:-50px;right:-50px;width:200px;height:200px;background:radial-gradient(circle,rgba(245,158,11,0.15),transparent 70%);pointer-events:none}
+.gb-head{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.gb-ic{width:44px;height:44px;border-radius:12px;background:rgba(245,158,11,0.12);border:1px solid rgba(245,158,11,0.4);display:flex;align-items:center;justify-content:center;color:#f59e0b;flex-shrink:0}
+.gb-ic svg{width:22px;height:22px}
+.gb-ttl{font-family:'Orbitron',sans-serif;font-size:15px;font-weight:800;letter-spacing:0.3px;color:#fff}
+.gb-sub{font-size:10px;color:#8a8a95;letter-spacing:1.5px;text-transform:uppercase;font-weight:600;margin-top:2px}
+.gb-status{margin-left:auto;padding:6px 12px;border-radius:20px;font-family:'Orbitron',sans-serif;font-size:9px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;display:flex;align-items:center;gap:6px;flex-shrink:0}
+.gb-status.active{background:rgba(34,197,94,0.12);color:#22c55e;border:1px solid rgba(34,197,94,0.45)}
+.gb-status.paused{background:rgba(239,68,68,0.12);color:#ef4444;border:1px solid rgba(239,68,68,0.45)}
+.gb-status .dot{width:6px;height:6px;border-radius:50%;background:currentColor;box-shadow:0 0 8px currentColor;animation:pl 1.4s infinite}
+.gb-status.paused .dot{animation:none}
+.gb-bar{height:8px;background:rgba(0,0,0,0.5);border-radius:6px;overflow:hidden;margin-bottom:10px;position:relative}
+.gb-fill{height:100%;background:linear-gradient(90deg,#f59e0b,#ef4444);border-radius:6px;transition:width 0.5s ease}
+.gb-info{display:flex;justify-content:space-between;font-size:12px;color:#a0a0b0;flex-wrap:wrap;gap:8px}
+.gb-info b{color:#fff;font-family:'JetBrains Mono',monospace;font-weight:700}
 
-/* ===== PILLS + STATUS ===== */
+/* BAN BANNER */
+.ban-banner{background:linear-gradient(135deg,rgba(239,68,68,0.15),rgba(239,68,68,0.05));border:1px solid rgba(239,68,68,0.5);border-radius:16px;padding:16px 20px;margin-bottom:16px;display:flex;align-items:center;gap:14px}
+.ban-banner .bi{width:44px;height:44px;border-radius:12px;background:rgba(239,68,68,0.15);border:1px solid rgba(239,68,68,0.5);display:flex;align-items:center;justify-content:center;color:#ef4444;flex-shrink:0}
+.ban-banner .bi svg{width:22px;height:22px}
+.ban-banner .bt h4{font-family:'Orbitron',sans-serif;font-size:13px;font-weight:800;color:#ef4444;margin-bottom:4px;letter-spacing:0.5px}
+.ban-banner .bt p{font-size:12px;color:#d0d5dd;line-height:1.5}
+
+/* CARD */
+.cc{position:relative;background:linear-gradient(145deg,#0b1220 0%,#080c14 100%);border:1px solid #1a2740;border-radius:16px;overflow:hidden;transition:border-color 0.25s,box-shadow 0.25s}
+.cc:hover{border-color:#1e3a5f;box-shadow:0 0 0 1px rgba(59,130,246,0.08),0 8px 32px rgba(0,0,0,0.5)}
+
 .tagline{padding:14px 16px 10px;display:flex;align-items:center;gap:7px;flex-wrap:wrap}
-.pill{
-  display:inline-flex;align-items:center;gap:6px;
-  background:rgba(255,255,255,0.03);
-  border:1px solid rgba(255,255,255,0.08);
-  border-radius:20px;
-  padding:5px 12px;
-  font-family:'Orbitron',sans-serif;
-  font-size:9px;font-weight:700;
-  letter-spacing:1.2px;
-  text-transform:uppercase;
-  color:#d0d5dd;
-}
+.pill{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:20px;padding:5px 12px;font-family:'Orbitron',sans-serif;font-size:9px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:#d0d5dd}
 .pill.uid{font-family:'JetBrains Mono',monospace;letter-spacing:0.4px;font-size:10px}
 .pill svg{width:11px;height:11px;opacity:0.75}
 
-.status-top{
-  display:inline-flex;align-items:center;gap:5px;
-  background:rgba(34,197,94,0.12);
-  border:1px solid rgba(34,197,94,0.5);
-  border-radius:20px;
-  padding:5px 12px;
-  font-family:'Orbitron',sans-serif;
-  font-size:9px;font-weight:800;
-  letter-spacing:1.2px;
-  text-transform:uppercase;
-  color:#22c55e;
-  white-space:nowrap;
-  margin-left:auto;
-}
+.status-top{display:inline-flex;align-items:center;gap:5px;background:rgba(34,197,94,0.12);border:1px solid rgba(34,197,94,0.5);border-radius:20px;padding:5px 12px;font-family:'Orbitron',sans-serif;font-size:9px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;color:#22c55e;white-space:nowrap;margin-left:auto}
 .status-top .dot{width:6px;height:6px;border-radius:50%;background:#22c55e;box-shadow:0 0 6px #22c55e;animation:pl 1.4s infinite}
 .status-top.paused{background:rgba(138,138,149,0.12);border-color:rgba(138,138,149,0.4);color:#8a8a95}
 .status-top.paused .dot{background:#8a8a95;box-shadow:none;animation:none}
@@ -718,71 +716,21 @@ body{background:radial-gradient(ellipse at top,#0a1020 0%,#000 55%);padding-bott
 .status-top.match .dot{background:#f59e0b;box-shadow:0 0 6px #f59e0b}
 .status-top.online{background:rgba(59,130,246,0.12);border-color:rgba(59,130,246,0.5);color:#60a5fa}
 .status-top.online .dot{background:#3b82f6;box-shadow:0 0 6px #3b82f6}
+.status-top.glory-pause{background:rgba(239,68,68,0.12);border-color:rgba(239,68,68,0.5);color:#ef4444}
+.status-top.glory-pause .dot{background:#ef4444;box-shadow:0 0 6px #ef4444;animation:pl 1.4s infinite}
 
-/* ===== REFRESH ===== */
-.refresh-btn{
-  display:inline-flex;align-items:center;gap:6px;
-  background:rgba(34,197,94,0.08);
-  border:1px solid rgba(34,197,94,0.35);
-  border-radius:9px;
-  padding:7px 14px;
-  color:#22c55e;
-  font-size:12px;font-weight:700;
-  cursor:pointer;
-  transition:all 0.2s;
-  margin:0 16px 14px;
-  font-family:'Inter',sans-serif;
-}
+.refresh-btn{display:inline-flex;align-items:center;gap:6px;background:rgba(34,197,94,0.08);border:1px solid rgba(34,197,94,0.35);border-radius:9px;padding:7px 14px;color:#22c55e;font-size:12px;font-weight:700;cursor:pointer;transition:all 0.2s;margin:0 16px 14px;font-family:'Inter',sans-serif}
 .refresh-btn:hover{background:rgba(34,197,94,0.15);border-color:#22c55e}
 .refresh-btn svg{width:12px;height:12px}
 .refresh-btn.spin svg{animation:sp 0.7s linear infinite}
 
-/* ===== AVATAR ===== */
-.acc-head{
-  display:flex;align-items:center;gap:12px;
-  padding:14px 16px;
-  background:linear-gradient(135deg,rgba(59,130,246,0.08),rgba(59,130,246,0.02));
-  border-top:1px solid rgba(59,130,246,0.1);
-  border-bottom:1px solid rgba(59,130,246,0.1);
-}
-.avatar{
-  width:48px;height:48px;border-radius:11px;
-  background:linear-gradient(135deg,#1e3a5f,#0f1e33);
-  border:1px solid rgba(59,130,246,0.3);
-  display:flex;align-items:center;justify-content:center;
-  font-family:'Orbitron',sans-serif;
-  font-weight:900;font-size:19px;color:#fff;
-  flex-shrink:0;
-  box-shadow:inset 0 0 16px rgba(59,130,246,0.1);
-}
+.acc-head{display:flex;align-items:center;gap:12px;padding:14px 16px;background:linear-gradient(135deg,rgba(59,130,246,0.08),rgba(59,130,246,0.02));border-top:1px solid rgba(59,130,246,0.1);border-bottom:1px solid rgba(59,130,246,0.1)}
+.avatar{width:48px;height:48px;border-radius:11px;background:linear-gradient(135deg,#1e3a5f,#0f1e33);border:1px solid rgba(59,130,246,0.3);display:flex;align-items:center;justify-content:center;font-family:'Orbitron',sans-serif;font-weight:900;font-size:19px;color:#fff;flex-shrink:0;box-shadow:inset 0 0 16px rgba(59,130,246,0.1)}
 .hinfo{flex:1;min-width:0}
-.hinfo h3{
-  font-family:'Orbitron',sans-serif;
-  font-size:14px;font-weight:800;
-  letter-spacing:0.3px;
-  color:#fff;
-  margin-bottom:3px;
-  overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
-}
-.hinfo p{
-  font-family:'JetBrains Mono',monospace;
-  font-size:10px;color:#7c869a;
-  letter-spacing:0.3px;
-}
-.lvl-badge{
-  background:rgba(59,130,246,0.12);
-  border:1px solid rgba(59,130,246,0.45);
-  border-radius:8px;
-  padding:6px 11px;
-  font-family:'Orbitron',sans-serif;
-  font-size:11px;font-weight:800;
-  letter-spacing:0.8px;
-  color:#60a5fa;
-  white-space:nowrap;
-  flex-shrink:0;
-}
+.hinfo h3{font-family:'Orbitron',sans-serif;font-size:14px;font-weight:800;letter-spacing:0.3px;color:#fff;margin-bottom:3px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.hinfo p{font-family:'JetBrains Mono',monospace;font-size:10px;color:#7c869a;letter-spacing:0.3px}
+.lvl-badge{background:rgba(59,130,246,0.12);border:1px solid rgba(59,130,246,0.45);border-radius:8px;padding:6px 11px;font-family:'Orbitron',sans-serif;font-size:11px;font-weight:800;letter-spacing:0.8px;color:#60a5fa;white-space:nowrap;flex-shrink:0}
 
-/* ===== INFO ROWS ===== */
 .cd{padding:12px 16px;border-bottom:1px solid rgba(255,255,255,0.05);display:grid;grid-template-columns:1fr 1fr;gap:8px 22px}
 @media(max-width:560px){.cd{grid-template-columns:1fr}}
 .row{display:flex;align-items:center;gap:7px;font-size:12px;min-width:0}
@@ -806,40 +754,11 @@ body{background:radial-gradient(ellipse at top,#0a1020 0%,#000 55%);padding-bott
 .matchrow{padding:11px 16px;border-bottom:1px solid rgba(255,255,255,0.05);display:flex;justify-content:space-between;align-items:center;font-size:10px;color:var(--mut);font-family:'Orbitron',sans-serif;font-weight:800;letter-spacing:1.5px;text-transform:uppercase}
 .matchrow .v{color:#fff;font-family:'JetBrains Mono',monospace;font-weight:700;font-size:13px;letter-spacing:0.5px}
 
-/* ===== END BUTTONS ===== */
-.acc-actions{
-  display:flex;
-  gap:8px;
-  padding:12px 14px 14px;
-  background:transparent;
-}
-.acc-actions button{
-  flex:1;
-  padding:11px 6px;
-  background:#1c1c1e;
-  border:1px solid #2a2a2e;
-  border-radius:10px;
-  color:#fff;
-  font-family:'Inter',sans-serif;
-  font-size:11px;
-  font-weight:800;
-  letter-spacing:0.8px;
-  text-transform:uppercase;
-  cursor:pointer;
-  transition:all 0.18s;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:5px;
-  min-width:0;
-}
+.acc-actions{display:flex;gap:8px;padding:12px 14px 14px;background:transparent}
+.acc-actions button{flex:1;padding:11px 6px;background:#1c1c1e;border:1px solid #2a2a2e;border-radius:10px;color:#fff;font-family:'Inter',sans-serif;font-size:11px;font-weight:800;letter-spacing:0.8px;text-transform:uppercase;cursor:pointer;transition:all 0.18s;display:flex;align-items:center;justify-content:center;gap:5px;min-width:0}
 .acc-actions button:hover{background:#242428;border-color:#3a3a40}
 .acc-actions button svg{width:13px;height:13px;flex-shrink:0}
-.acc-actions button.danger{
-  background:#1a0f10;
-  border:1px solid #7a1f1f;
-  color:#ff3b3b;
-}
+.acc-actions button.danger{background:#1a0f10;border:1px solid #7a1f1f;color:#ff3b3b}
 .acc-actions button.danger:hover{background:#241012;border-color:#ff3b3b}
 .acc-actions button.danger svg{stroke:#ff3b3b}
 
@@ -849,16 +768,7 @@ body{background:radial-gradient(ellipse at top,#0a1020 0%,#000 55%);padding-bott
   .acc-actions button svg{width:11px;height:11px}
 }
 
-/* ===== ADD CARD ===== */
-.add{
-  background:transparent;
-  border:1.5px dashed var(--line2);
-  border-radius:14px;
-  padding:40px 20px;
-  text-align:center;cursor:pointer;
-  color:var(--mut);font-family:inherit;
-  width:100%;transition:all 0.2s;
-}
+.add{background:transparent;border:1.5px dashed var(--line2);border-radius:14px;padding:40px 20px;text-align:center;cursor:pointer;color:var(--mut);font-family:inherit;width:100%;transition:all 0.2s}
 .add:hover{border-color:#3a3a4a;color:#fff}
 .add .plus{display:flex;justify-content:center;margin-bottom:10px;color:#fff}
 .add .plus svg{width:32px;height:32px}
@@ -869,7 +779,6 @@ body{background:radial-gradient(ellipse at top,#0a1020 0%,#000 55%);padding-bott
 .empty .big{display:flex;justify-content:center;margin-bottom:12px;opacity:0.25}
 .empty .big svg{width:44px;height:44px}
 
-/* ===== MODALS ===== */
 .modal{position:fixed;inset:0;background:rgba(0,0,0,0.9);backdrop-filter:blur(6px);display:none;align-items:center;justify-content:center;z-index:100;padding:16px}
 .modal.on{display:flex}
 .mc{background:var(--card);border:1px solid var(--line2);border-radius:16px;padding:22px;max-width:420px;width:100%;max-height:90vh;overflow-y:auto}
@@ -892,7 +801,6 @@ body{background:radial-gradient(ellipse at top,#0a1020 0%,#000 55%);padding-bott
 .err.on{display:block}
 .hide{display:none!important}
 
-/* Confirm modal */
 .conf{position:fixed;inset:0;background:rgba(0,0,0,0.88);backdrop-filter:blur(8px);display:none;align-items:center;justify-content:center;z-index:200;padding:18px}
 .conf.on{display:flex}
 .conf-box{background:#141414;border:1px solid #262626;border-radius:16px;padding:22px;max-width:400px;width:100%;font-family:'Inter',sans-serif}
@@ -912,11 +820,12 @@ body{background:radial-gradient(ellipse at top,#0a1020 0%,#000 55%);padding-bott
 .mdb.on b{color:#fff}
 .lmax{font-style:normal;font-weight:700}
 .dl-note{font-size:11px;color:var(--mut);margin:0 0 12px;line-height:1.5}
-.dl-list{max-height:260px;overflow-y:auto;margin:0 0 14px;border:1px solid var(--line2);border-radius:10px}
-.dl-row{display:flex;justify-content:space-between;gap:10px;padding:9px 12px;font-size:12px;border-bottom:1px solid var(--line2)}
+.dl-list{max-height:280px;overflow-y:auto;margin:0 0 14px;border:1px solid var(--line2);border-radius:10px}
+.dl-row{display:flex;justify-content:space-between;gap:10px;padding:10px 12px;font-size:12px;border-bottom:1px solid var(--line2);align-items:center}
 .dl-row:last-child{border-bottom:none}
-.dl-row .u{font-family:'JetBrains Mono',monospace;word-break:break-all}
-.dl-row .l{color:#4ade80;font-weight:700;white-space:nowrap}
+.dl-row .u{font-family:'JetBrains Mono',monospace;word-break:break-all;color:#fff}
+.dl-row .dt{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--mut);white-space:nowrap}
+.dl-row .l{color:#4ade80;font-weight:700;white-space:nowrap;font-family:'JetBrains Mono',monospace}
 .dl-empty{padding:18px;text-align:center;font-size:12px;color:var(--mut)}
 .dl-btns{display:flex;gap:8px;margin-bottom:8px}
 .dl-btns a.sb{display:block;text-align:center;text-decoration:none;box-sizing:border-box}
@@ -937,13 +846,40 @@ body{background:radial-gradient(ellipse at top,#0a1020 0%,#000 55%);padding-bott
 </div>
 <div class="act">
 <button class="bs bf" id="rf">__ICON_REFRESH__</button>
+<button class="bs bw" id="hist-open" onclick="openHistory()">__ICON_HISTORY__ History</button>
 <button class="bs bw" id="dl-open" onclick="openDl()">Download <span id="dl-n"></span></button>
 <a class="bs bw" href="/plans">Buy</a>
 <a class="bs bg" href="/logout">Logout</a>
 </div>
 </div>
 </div>
-<div class="main"><div class="grid" id="grid"></div></div>
+<div class="main">
+<div id="ban-banner" class="ban-banner" style="display:none">
+<div class="bi">__ICON_BAN__</div>
+<div class="bt">
+<h4>Account Banned</h4>
+<p id="ban-reason">Your account has been suspended.</p>
+</div>
+</div>
+
+<div id="glory-banner" class="glory-banner" style="display:none">
+<div class="gb-head">
+<div class="gb-ic">__ICON_FIRE__</div>
+<div>
+<div class="gb-ttl">Daily Glory</div>
+<div class="gb-sub" id="gb-sub">Resets 4:00 AM (BD)</div>
+</div>
+<div class="gb-status active" id="gb-status"><span class="dot"></span><span id="gb-status-txt">Active</span></div>
+</div>
+<div class="gb-bar"><div class="gb-fill" id="gb-fill" style="width:0%"></div></div>
+<div class="gb-info">
+<span>Today: <b id="gb-today">0</b> / <b id="gb-limit">50000</b></span>
+<span>Next reset: <b id="gb-next">--</b></span>
+</div>
+</div>
+
+<div class="grid" id="grid"></div>
+</div>
 
 <div class="modal" id="am">
 <div class="mc">
@@ -986,6 +922,14 @@ body{background:radial-gradient(ellipse at top,#0a1020 0%,#000 55%);padding-bott
 <a class="sb" id="dl-csv" href="/api/download/completed?format=csv" download>Download .CSV</a>
 </div>
 <button type="button" class="sb ghost" id="dl-clear" onclick="clearDone()">Clear list</button>
+</div>
+</div>
+
+<div class="modal" id="hm">
+<div class="mc" style="max-width:520px">
+<div class="mh"><h3>Glory History</h3><button class="mx" onclick="closeHistory()">__ICON_X__</button></div>
+<p class="dl-note" id="hm-note">Loading...</p>
+<div class="dl-list" id="hm-list" style="max-height:420px"></div>
 </div>
 </div>
 
@@ -1040,11 +984,27 @@ if(!ok)return;
 try{await fetch('/api/completed/clear',{method:'POST'})}catch(e){}
 await fetchS();renderDl();
 }
+function openHistory(){
+document.getElementById('hm').classList.add('on');
+document.getElementById('hm-note').textContent='Loading...';
+document.getElementById('hm-list').innerHTML='';
+fetch('/api/glory/history?limit=300').then(r=>r.json()).then(d=>{
+if(d.status!=='ok'){document.getElementById('hm-note').textContent=d.error||'Failed to load';return}
+const n=d.count||0;
+document.getElementById('hm-note').textContent=n+' entries. Latest first. Times in Bangladesh timezone.';
+if(!n){document.getElementById('hm-list').innerHTML='<div class="dl-empty">No history yet. Play some matches to start earning glory.</div>';return}
+let h='';
+d.history.forEach(x=>{
+h+='<div class="dl-row"><span class="u">'+esc(x.date)+' '+esc(x.time)+'</span><span class="l">+'+esc(x.amount)+'</span><span class="dt">Total '+esc(x.total_after)+'</span></div>';
+});
+document.getElementById('hm-list').innerHTML=h;
+}).catch(()=>{document.getElementById('hm-note').textContent='Network error';});
+}
+function closeHistory(){document.getElementById('hm').classList.remove('on')}
 function sw(t){CT=t;document.querySelectorAll('.tb').forEach(el=>el.classList.toggle('on',el.dataset.t===t));document.getElementById('fg').classList.toggle('hide',t!=='guest');document.getElementById('ft').classList.toggle('hide',t!=='token');document.getElementById('fb').classList.toggle('hide',t!=='bulk');document.getElementById('ab').textContent=(t==='bulk'?'Add All & Start':'Start Bot')}
 function openAdd(){document.getElementById('am').classList.add('on');document.getElementById('aer').classList.remove('on')}
 function closeAdd(){document.getElementById('am').classList.remove('on');document.getElementById('af').reset();document.getElementById('aer').classList.remove('on')}
 
-/* Confirm — Yes/No */
 function showConfirm(title,msg,yesText,noText){
 return new Promise(resolve=>{
 document.getElementById('cm-t').textContent=title;
@@ -1060,23 +1020,6 @@ document.getElementById('cm-n').onclick=null;
 };
 document.getElementById('cm-y').onclick=()=>{clean();resolve(true)};
 document.getElementById('cm-n').onclick=()=>{clean();resolve(false)};
-});
-}
-
-/* Info — only single Close button */
-function showInfo(title,msg,btnText){
-return new Promise(resolve=>{
-document.getElementById('cm-t').textContent=title;
-document.getElementById('cm-m').textContent=msg;
-document.getElementById('cm-y').textContent=btnText||'Close';
-document.getElementById('cm-n').style.display='none';
-document.getElementById('cm').classList.add('on');
-document.getElementById('cm-y').onclick=()=>{
-document.getElementById('cm').classList.remove('on');
-document.getElementById('cm-y').onclick=null;
-document.getElementById('cm-n').style.display='';
-resolve(true);
-};
 });
 }
 
@@ -1116,7 +1059,6 @@ pl.token=document.getElementById('fk').value.trim();
 if(!pl.token){err.textContent='Token Required';err.classList.add('on');btn.disabled=false;btn.textContent='Start Bot';return}
 }
 
-/* 1) Check account level + region */
 let check;
 try{
 const r=await fetch('/api/account/check',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(pl)});
@@ -1133,7 +1075,6 @@ const lvl=check.level||1;
 const reg=(check.region||'').toUpperCase();
 const isIND=(reg==='IND'||reg==='IN');
 
-/* 2) Below target level -> GLD plays solo matches first, then LVL takes over */
 const lvlMin=check.lvl_min_level||3;
 if(MODE==='limited'&&lvl>=(check.limited_max_level||8)){
 const okl=await showConfirm('Already Level '+lvl,'This account is already at or above the limit, so it will go straight to your Download list without leveling.','Yes, Continue','No, Cancel');
@@ -1149,7 +1090,6 @@ const okg=await showConfirm(
 if(!okg){btn.disabled=false;btn.textContent='Start Bot';return}
 }
 
-/* 3) Level ≥ 3 AND IND → IND warning */
 if(isIND){
 const ok=await showConfirm(
 'IND Low Exp',
@@ -1160,7 +1100,6 @@ const ok=await showConfirm(
 if(!ok){btn.disabled=false;btn.textContent='Start Bot';return}
 }
 
-/* 4) Add the account */
 btn.textContent='Adding...';
 try{
 const r=await fetch('/api/account/add',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(Object.assign({},pl,{mode:MODE}))});
@@ -1205,6 +1144,7 @@ const m=Math.floor((s%3600)/60);
 if(h>0)return h+'h '+m+'m';
 return m+'m'
 }
+function fmtNum(n){return (n||0).toLocaleString()}
 
 function phaseLabel(acc,data){
 const t=(data&&data.lvl_min_level)||3;
@@ -1220,6 +1160,31 @@ LMAX=data.limited_max_level||8;
 document.getElementById('dl-n').textContent=DONE.length?'('+DONE.length+')':'';
 document.querySelectorAll('.lmax').forEach(e=>{e.textContent=LMAX});
 if(document.getElementById('dm').classList.contains('on'))renderDl();
+
+const bb=document.getElementById('ban-banner');
+if(data.banned){bb.style.display='flex';document.getElementById('ban-reason').textContent=data.ban_reason||'Your account has been suspended.';}
+else{bb.style.display='none';}
+
+const gb=document.getElementById('glory-banner');
+const gl=data.glory||{};
+if(gl.enabled){
+gb.style.display='block';
+document.getElementById('gb-today').textContent=fmtNum(gl.today);
+document.getElementById('gb-limit').textContent=fmtNum(gl.limit);
+const pct=gl.limit>0?Math.min(100,(gl.today/gl.limit)*100):0;
+document.getElementById('gb-fill').style.width=pct+'%';
+const st=document.getElementById('gb-status');
+const stt=document.getElementById('gb-status-txt');
+if(gl.paused){st.className='gb-status paused';stt.textContent='Paused';}
+else{st.className='gb-status active';stt.textContent='Active';}
+const rh=gl.reset_hour!=null?gl.reset_hour:4;
+const rm=gl.reset_minute!=null?gl.reset_minute:0;
+document.getElementById('gb-sub').textContent='Resets '+String(rh).padStart(2,'0')+':'+String(rm).padStart(2,'0')+' AM (BD)';
+const ns=gl.next_reset||0;
+const h=Math.floor(ns/3600),m=Math.floor((ns%3600)/60);
+document.getElementById('gb-next').textContent=h+'h '+m+'m';
+}else{gb.style.display='none';}
+
 const unl=!!data.unlimited;
 const slots=unl?1e9:(data.slots||0);
 if(data.expired){window.location.href='/expired';return}
@@ -1229,60 +1194,53 @@ a.forEach(acc=>{
 const gained=acc.gained_exp||0;
 const isPaused=acc.status==='PAUSED';
 const isMatch=acc.status==='IN_MATCH';
+const isGlory=acc.glory_paused;
 const nickname=esc(acc.nickname||'Player');
 const initial=nickname.charAt(0).toUpperCase()||'P';
 const uid=esc(acc.uid);
 const region=esc(acc.region||'IND');
 
 let statusLabel, statusCls;
-if(isPaused){statusLabel='PAUSED';statusCls='status-top paused'}
+if(isGlory){statusLabel='GLORY LIMIT';statusCls='status-top glory-pause'}
+else if(isPaused){statusLabel='PAUSED';statusCls='status-top paused'}
 else if(isMatch){statusLabel='IN MATCH';statusCls='status-top match'}
 else if(acc.status==='ONLINE'){statusLabel='ONLINE';statusCls='status-top online'}
 else if(acc.status==='LOGIN FAILED'){statusLabel='LOGIN FAILED';statusCls='status-top paused'}
 else {statusLabel='LIVE';statusCls='status-top'}
 
 h+='<div class="cc">';
-
 h+='<div class="tagline">';
 h+='<span class="pill">'+SVG.globe+' '+region+'</span>';
 h+='<span class="pill uid">'+SVG.id+' '+uid+'</span>';
 h+='<span class="'+statusCls+'"><span class="dot"></span>'+statusLabel+'</span>';
 h+='</div>';
-
 h+='<button class="refresh-btn" onclick="refreshAcc(\\''+uid+'\\',this)">'+SVG.refresh+' Refresh</button>';
-
 h+='<div class="acc-head">';
 h+='<div class="avatar">'+initial+'</div>';
 h+='<div class="hinfo"><h3>'+nickname+'</h3><p>UID: '+uid+'</p></div>';
 h+='<div class="lvl-badge">Lv.'+(acc.level||1)+'</div>';
 h+='</div>';
-
 h+='<div class="cd">';
 h+='<div class="row"><span class="k">Created</span><span class="v">'+ago(acc.created_at)+'</span></div>';
 h+='<div class="row"><span class="k">Played</span><span class="v">'+(acc.matches_played||0)+'</span></div>';
 h+='<div class="row"><span class="k">Nickname</span><span class="v">'+nickname+'</span></div>';
 h+='<div class="row"><span class="k">Region</span><span class="v">'+region+'</span></div>';
 h+='</div>';
-
 h+='<div class="timerow"><span class="td"></span> Updated '+ago(acc.last_update)+'</div>';
 h+='<div class="lvlrow"><span>Level</span><span class="v">'+(acc.level||1)+'</span></div>';
 h+='<div class="lvlrow"><span>Phase</span><span class="v">'+phaseLabel(acc,data)+'</span></div>';
 h+='<div class="lvlrow"><span>System</span><span class="v">'+(acc.mode==='limited'?'Limited &rarr; Lv.'+LMAX:'Unlimited XP')+'</span></div>';
-
 h+='<div class="statrow">';
 h+='<div class="sc"><div class="l">EXP</div><div class="v">'+(acc.current_exp||0).toLocaleString()+'</div></div>';
 h+='<div class="sc"><div class="l">Initial</div><div class="v">'+(acc.initial_exp||0).toLocaleString()+'</div></div>';
 h+='<div class="sc"><div class="l">Gained</div><div class="v g">+'+gained.toLocaleString()+'</div></div>';
 h+='</div>';
-
 h+='<div class="matchrow"><span>Matches Played</span><span class="v">'+(acc.matches_played||0)+'</span></div>';
-
 h+='<div class="acc-actions">';
 h+='<button onclick="toggleAcc(\\''+uid+'\\',\\'pause\\')">'+SVG.pause+' PAUSE</button>';
 h+='<button onclick="refreshAcc(\\''+uid+'\\',this)">'+SVG.refresh+' REFRESH</button>';
 h+='<button class="danger" onclick="delAcc(\\''+uid+'\\')">'+SVG.trash+' DELETE</button>';
 h+='</div>';
-
 h+='</div>';
 });
 
@@ -1336,6 +1294,9 @@ DASHBOARD_HTML = DASHBOARD_HTML.replace("__SVG_PLUS__", _icon("plus", "#fff", 32
 DASHBOARD_HTML = DASHBOARD_HTML.replace("__SVG_WARN__", _icon("warn", "currentColor", 44).replace('"', '\\"'))
 DASHBOARD_HTML = DASHBOARD_HTML.replace("__ICON_REFRESH__", _icon("refresh", "currentColor", 14))
 DASHBOARD_HTML = DASHBOARD_HTML.replace("__ICON_X__", _icon("x", "currentColor", 18))
+DASHBOARD_HTML = DASHBOARD_HTML.replace("__ICON_HISTORY__", _icon("history", "currentColor", 12))
+DASHBOARD_HTML = DASHBOARD_HTML.replace("__ICON_BAN__", _icon("ban", "currentColor", 22))
+DASHBOARD_HTML = DASHBOARD_HTML.replace("__ICON_FIRE__", _icon("fire", "currentColor", 22))
 
 # ==================== ADMIN LOGIN ====================
 ADMIN_LOGIN_HTML = """<!DOCTYPE html>
@@ -1413,12 +1374,12 @@ ADMIN_PANEL_HTML = """<!DOCTYPE html>
 """ + _CSS + """
 body{background:#000}
 .top{background:rgba(0,0,0,0.95);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:50}
-.top-in{max-width:1400px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between}
+.top-in{max-width:1500px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between}
 .logo{display:flex;align-items:center;gap:10px;font-family:'Orbitron',sans-serif;font-size:12px;font-weight:700;letter-spacing:2px}
 .lm{width:30px;height:30px;background:linear-gradient(135deg,#ef4444,#b91c1c);color:#fff;border-radius:8px;display:inline-flex;align-items:center;justify-content:center;font-weight:900;font-size:14px}
 .out{background:transparent;border:1px solid var(--line2);color:var(--mut);padding:8px 14px;border-radius:8px;font-family:'Orbitron',sans-serif;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;transition:all 0.2s}
 .out:hover{border-color:var(--red);color:var(--red)}
-.main{max-width:1400px;margin:0 auto;padding:28px 24px 80px}
+.main{max-width:1500px;margin:0 auto;padding:28px 24px 80px}
 .st{font-family:'Orbitron',sans-serif;font-size:14px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:14px;display:flex;align-items:center;gap:10px}
 .st::before{content:'';width:3px;height:16px;background:#fff;border-radius:2px}
 .panel{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;margin-bottom:28px}
@@ -1431,25 +1392,29 @@ body{background:#000}
 .btn{background:linear-gradient(135deg,#3b82f6,#2563eb);color:#fff;border:none;padding:12px 26px;border-radius:10px;font-family:'Orbitron',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:all 0.2s}
 .btn:hover{box-shadow:0 8px 24px rgba(59,130,246,0.4)}
 .hint{font-size:11px;color:var(--mut);margin-top:10px}
-.tw{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.tw{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;overflow-x:auto}
 table{width:100%;border-collapse:collapse;font-size:13px}
-th{text-align:left;padding:14px 16px;font-family:'Orbitron',sans-serif;font-size:9px;font-weight:700;color:var(--mut);letter-spacing:1.5px;text-transform:uppercase;border-bottom:1px solid var(--line2);background:var(--card2)}
-td{padding:14px 16px;border-bottom:1px solid var(--line);vertical-align:middle;color:#fff}
+th{text-align:left;padding:12px 14px;font-family:'Orbitron',sans-serif;font-size:9px;font-weight:700;color:var(--mut);letter-spacing:1.5px;text-transform:uppercase;border-bottom:1px solid var(--line2);background:var(--card2);white-space:nowrap}
+td{padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:middle;color:#fff;white-space:nowrap}
 tbody tr:last-child td{border-bottom:none}
 tbody tr:hover{background:rgba(255,255,255,0.02)}
 .mono{font-family:'JetBrains Mono',monospace;font-size:12px}
 .muted{color:var(--mut)}
-.badge{display:inline-block;padding:4px 10px;border-radius:6px;font-family:'Orbitron',sans-serif;font-size:9px;font-weight:700;letter-spacing:1px}
+.badge{display:inline-block;padding:4px 10px;border-radius:6px;font-family:'Orbitron',sans-serif;font-size:9px;font-weight:700;letter-spacing:1px;white-space:nowrap}
 .ba{background:rgba(34,197,94,0.15);color:var(--green);border:1px solid rgba(34,197,94,0.3)}
 .be{background:rgba(239,68,68,0.15);color:var(--red);border:1px solid rgba(239,68,68,0.3)}
+.bw{background:rgba(245,158,11,0.15);color:var(--gold);border:1px solid rgba(245,158,11,0.3)}
 .acts{display:flex;gap:6px;flex-wrap:wrap}
-.mini{background:var(--card2);border:1px solid var(--line2);color:var(--mut);padding:7px 11px;font-family:'Orbitron',sans-serif;font-size:9px;font-weight:700;letter-spacing:1px;border-radius:6px;cursor:pointer;transition:all 0.15s}
+.mini{background:var(--card2);border:1px solid var(--line2);color:var(--mut);padding:6px 10px;font-family:'Orbitron',sans-serif;font-size:9px;font-weight:700;letter-spacing:1px;border-radius:6px;cursor:pointer;transition:all 0.15s;white-space:nowrap}
 .mini:hover{border-color:#3b82f6;color:#60a5fa}
 .mini.danger:hover{border-color:var(--red);color:var(--red)}
+.mini.warn:hover{border-color:var(--gold);color:var(--gold)}
+.mini.green:hover{border-color:var(--green);color:var(--green)}
 .empty{text-align:center;padding:60px 20px;color:var(--mut);font-size:14px}
 .toast{position:fixed;bottom:24px;right:24px;background:var(--card2);border:1px solid #3b82f6;color:#fff;padding:14px 20px;border-radius:10px;font-size:13px;font-weight:700;box-shadow:0 8px 32px rgba(0,0,0,0.6);opacity:0;transform:translateY(20px);transition:all 0.3s;pointer-events:none;z-index:200;max-width:360px}
 .toast.on{opacity:1;transform:translateY(0)}
 .toast.err{border-color:var(--red)}
+.gold-txt{color:var(--gold);font-family:'JetBrains Mono',monospace;font-weight:700}
 </style>
 </head>
 <body>
@@ -1481,6 +1446,12 @@ tbody tr:hover{background:rgba(255,255,255,0.02)}
 <button class="btn" onclick="saveCfg()">Save Settings</button>
 <div class="hint">Accounts below "GLD From Level" go straight to LVL. Accounts from that level up to (but not including) "LVL From Level" play solo GLD matches until they reach it, then LVL levels them up.</div>
 </div>
+<div class="st">Glory Settings</div>
+<div class="panel">
+<div class="grid4" id="gloryGrid"></div>
+<button class="btn" onclick="saveGlory()">Save Glory Settings</button>
+<div class="hint">Daily glory limit is enforced per-user. When a user hits the limit, their accounts auto-pause and auto-resume at the daily reset time (Bangladesh timezone, default 4:00 AM).</div>
+</div>
 <div class="st">Live Accounts</div>
 <div class="tw" id="accTbl"><div class="empty">Loading...</div></div>
 <div class="st" style="margin-top:34px">Live Logs</div>
@@ -1493,6 +1464,8 @@ function esc(s){if(s==null)return'';return String(s).replace(/&/g,'&amp;').repla
 function toast(msg,err){const t=document.getElementById('toast');t.textContent=msg;t.classList.toggle('err',!!err);t.classList.add('on');setTimeout(()=>t.classList.remove('on'),2600)}
 function fmtLeft(exp){const now=Math.floor(Date.now()/1000);const s=exp-now;if(s<=0)return{t:'Expired',e:true};const h=Math.floor(s/3600);const m=Math.floor((s%3600)/60);return{t:h+'h '+m+'m',e:false}}
 function fmtDate(ts){return new Date(ts*1000).toLocaleString()}
+function fmtNum(n){return (n||0).toLocaleString()}
+
 async function createU(){
 const u=document.getElementById('nu').value.trim();
 const p=document.getElementById('np').value.trim();
@@ -1518,21 +1491,31 @@ const users=d.users||[];
 const w=document.getElementById('tbl');
 if(users.length===0){w.innerHTML='<div class="empty">No Users Yet</div>';return}
 let h='<table><thead><tr>';
-h+='<th>Username</th><th>Slots</th><th>Used</th><th>Expires</th><th>Created</th><th>Actions</th>';
+h+='<th>Username</th><th>Slots</th><th>Used</th><th>Glory</th><th>Status</th><th>Expires</th><th>Created</th><th>Actions</th>';
 h+='</tr></thead><tbody>';
 users.forEach(u=>{
 const e=fmtLeft(u.expires_at);
 const b=e.e?'<span class="badge be">Expired</span>':'<span class="badge ba">'+e.t+'</span>';
+let stB='<span class="badge ba">OK</span>';
+if(u.banned)stB='<span class="badge be">BANNED</span>';
+else if(u.glory_paused)stB='<span class="badge bw">GLORY LIMIT</span>';
 h+='<tr>';
 h+='<td class="mono">'+esc(u.username)+'</td>';
 h+='<td class="mono">'+(u.unlimited?'&infin;':u.slots)+'</td>';
 h+='<td class="mono muted">'+(u.used_slots||0)+'</td>';
+h+='<td class="gold-txt">'+fmtNum(u.glory_today||0)+'</td>';
+h+='<td>'+stB+'</td>';
 h+='<td>'+b+'</td>';
 h+='<td class="muted">'+fmtDate(u.created_at)+'</td>';
 h+='<td><div class="acts">';
 h+='<button class="mini" onclick="ext(\\''+esc(u.username)+'\\',24)">+24H</button>';
 h+='<button class="mini" onclick="slot(\\''+esc(u.username)+'\\',1)">+1 Slot</button>';
-h+='<button class="mini" data-u="'+esc(u.username)+'" data-n="'+(u.unlimited?'0':'1')+'" onclick="unl(this)">'+(u.unlimited?'Set Limited':'Unlimited')+'</button>';
+h+='<button class="mini green" onclick="resetGlory(\\''+esc(u.username)+'\\')">Reset Glory</button>';
+if(u.banned){
+h+='<button class="mini green" onclick="banU(\\''+esc(u.username)+'\\',false)">Unban</button>';
+}else{
+h+='<button class="mini warn" onclick="banU(\\''+esc(u.username)+'\\',true)">Ban</button>';
+}
 h+='<button class="mini danger" onclick="delU(\\''+esc(u.username)+'\\')">Delete</button>';
 h+='</div></td>';
 h+='</tr>'
@@ -1566,15 +1549,32 @@ if(d.status==='ok'){toast('Deleted '+u);loadU()}
 else{toast(d.error||'Failed',true)}
 }catch(e){toast('Network Error',true)}
 }
-async function unl(b){
-const u=b.dataset.u,on=b.dataset.n==='1';
+async function banU(u,ban){
+let reason='';
+if(ban){
+reason=prompt('Reason for banning '+u+':','Violation of terms');
+if(reason===null)return;
+}else{
+if(!confirm('Remove ban from '+u+'?'))return;
+}
 try{
-const r=await fetch('/api/admin/set-unlimited',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({username:u,unlimited:on})});
+const r=await fetch('/api/admin/ban',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({username:u,ban:ban,reason:reason||''})});
 const d=await r.json();
-if(d.status==='ok'){toast(u+(on?' Is Now Unlimited':' Is Now Limited'));loadU()}else{toast(d.error||'Failed',true)}
+if(d.status==='ok'){toast((ban?'Banned ':'Unbanned ')+u);loadU()}
+else{toast(d.error||'Failed',true)}
+}catch(e){toast('Network Error',true)}
+}
+async function resetGlory(u){
+if(!confirm('Reset today\\'s glory for '+u+' and resume paused accounts?'))return;
+try{
+const r=await fetch('/api/admin/glory/reset',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({username:u})});
+const d=await r.json();
+if(d.status==='ok'){toast('Glory Reset For '+u);loadU()}
+else{toast(d.error||'Failed',true)}
 }catch(e){toast('Network Error',true)}
 }
 const CFG_FIELDS=[['gld_min_level','GLD From Level'],['lvl_min_level','LVL From Level (GLD Target)'],['default_slots','Default Slots'],['max_slots_cap','Max Slots Cap'],['bulk_max_lines','Bulk Max Lines (0 = None)'],['level_poll_seconds','Level Poll (Sec)'],['max_parallel_logins','Parallel Logins'],['login_fail_limit','Login Fail Limit'],['limited_max_level','Limited System Max Level']];
+const GLORY_FIELDS=[['glory_daily_limit','Daily Glory Limit'],['glory_match_reward','Glory Per Match'],['glory_reset_hour','Reset Hour (BD, 0-23)'],['glory_reset_minute','Reset Minute (0-59)']];
 async function loadCfg(){
 try{
 const r=await fetch('/api/admin/config');const d=await r.json();
@@ -1584,9 +1584,15 @@ const g=document.getElementById('cfgGrid');
 if(!g.dataset.built){
 g.innerHTML=CFG_FIELDS.map(f=>'<div class="f"><label>'+f[1]+'</label><input type="number" id="cfg_'+f[0]+'"></div>').join('');
 g.dataset.built='1';
-CFG_FIELDS.forEach(f=>{document.getElementById('cfg_'+f[0]).value=CFG[f[0]]});
-document.getElementById('cfg_global_unlimited').checked=!!CFG.global_unlimited;
 }
+CFG_FIELDS.forEach(f=>{const el=document.getElementById('cfg_'+f[0]);if(el)el.value=CFG[f[0]]||0});
+document.getElementById('cfg_global_unlimited').checked=!!CFG.global_unlimited;
+const gg=document.getElementById('gloryGrid');
+if(!gg.dataset.built){
+gg.innerHTML=GLORY_FIELDS.map(f=>'<div class="f"><label>'+f[1]+'</label><input type="number" id="gcfg_'+f[0]+'"></div>').join('');
+gg.dataset.built='1';
+}
+GLORY_FIELDS.forEach(f=>{const el=document.getElementById('gcfg_'+f[0]);if(el)el.value=CFG[f[0]]||0});
 }catch(e){}
 }
 async function saveCfg(){
@@ -1597,6 +1603,16 @@ try{
 const r=await fetch('/api/admin/config',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({config:c})});
 const d=await r.json();
 if(d.status==='ok'){CFG=d.config;toast('Settings Saved')}else{toast(d.error||'Failed',true)}
+}catch(e){toast('Network Error',true)}
+}
+async function saveGlory(){
+const c={};
+GLORY_FIELDS.forEach(f=>{c[f[0]]=parseInt(document.getElementById('gcfg_'+f[0]).value)});
+c.glory_enabled=true;
+try{
+const r=await fetch('/api/admin/config',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({config:c})});
+const d=await r.json();
+if(d.status==='ok'){CFG=d.config;toast('Glory Settings Saved')}else{toast(d.error||'Failed',true)}
 }catch(e){toast('Network Error',true)}
 }
 async function loadAcc(){
@@ -1648,6 +1664,7 @@ ALL_TEMPLATES = {
     "plans": PLANS_HTML,
     "dashboard": DASHBOARD_HTML,
     "expired": EXPIRED_HTML,
+    "banned": BANNED_HTML,
     "admin_login": ADMIN_LOGIN_HTML,
     "admin_panel": ADMIN_PANEL_HTML,
 }
